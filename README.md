@@ -16,6 +16,9 @@ My gist for the json made by me:
 
 ## Problem 3 Pizza:
 
+Code to create the pizza's objects
+<img src ="https://user-images.githubusercontent.com/113385187/197419053-bdfa936a-800a-4fb3-aafc-3a9b1ff3a435.PNG" width="300"> 
+Result:
 <img src ="https://user-images.githubusercontent.com/113385187/197419052-f109f78a-b5dd-48f4-b526-11a0a10f45fd.PNG" width="300"> 
 
-<img src ="https://user-images.githubusercontent.com/113385187/197419053-bdfa936a-800a-4fb3-aafc-3a9b1ff3a435.PNG" width="300"> 
+
