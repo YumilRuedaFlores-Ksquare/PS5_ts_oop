@@ -16,8 +16,16 @@ My gist for the json made by me:
 ## Problem 2 Matrix:
 In the following picture I show how it works, the first example is the addition of two matrices as shown below and the second example is the attempt to add two matrices of different dimensions which prints a "NOOP".
 
-        [ 0 10]        [ 0 0 ]     
-    A = [ 0 0 ]    B = [ 0 10]     
+    A = [ 0 10]    B = [ 0 0 ]     
+        [ 0 0 ]        [ 0 10]     
+Then we start with the multiplications, I added a "SIP" for when the multiplication is possible, the matrices used in both examples I will put them here below as well as the result of the multiplication of these. EX1 and EX2 respectly:
+
+     m1 = [ 1 2 ] m5 = [ 1 ]  result in m1 = [ 5  ]  m3 = [ 3 2 1 ]   m4 = [ 2 1 ]   result in m3 = [ 11 5 ]                  
+          [ 3 4 ]      [ 2 ]                 [ 11 ]       [ 1 1 3 ]        [ 1 0 ]                  [ 12 7 ]
+                                                          [ 0 2 1 ]        [ 3 2 ]                  [ 5  2 ]
+
+Finally I multiply m3 by m1 and it is possible because m3 (rows:3, columns:2) and m1 (rows:2, columns: 1).
+Then it is obvious, the rule is respected, the column of the first matrix and the rows of the second are of the same dimension, but for the following example, it is a "NOOP" because I invert the cases and the foundation is not fulfilled because 1 !=3.
 
 <img src ="[https://user-images.githubusercontent.com/113385187/197419018-f4e9d526-c3f8-40b7-9c44-c69f7db0c236.PNG](https://user-images.githubusercontent.com/113385187/197420876-09914d13-3861-47e1-9a0e-7db85c54d442.PNG)" width="500"> 
 
