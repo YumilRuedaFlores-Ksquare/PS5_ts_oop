@@ -14,6 +14,12 @@ My gist for the json made by me:
 <img src ="https://user-images.githubusercontent.com/113385187/197419018-f4e9d526-c3f8-40b7-9c44-c69f7db0c236.PNG" width="500"> 
 
 ## Problem 2 Matrix:
+In the following picture I show how it works, the first example is the addition of two matrices as shown below and the second example is the attempt to add two matrices of different dimensions which prints a "NOOP".
+
+        [ 0 10]        [ 0 0 ]     
+    A = [ 0 0 ]    B = [ 0 10]     
+
+<img src ="[https://user-images.githubusercontent.com/113385187/197419018-f4e9d526-c3f8-40b7-9c44-c69f7db0c236.PNG](https://user-images.githubusercontent.com/113385187/197420876-09914d13-3861-47e1-9a0e-7db85c54d442.PNG)" width="500"> 
 
 ## Problem 3 Pizza:
 
