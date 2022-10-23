@@ -27,7 +27,7 @@ Then we start with the multiplications, I added a "SIP" for when the multiplicat
 Finally I multiply m3 by m1 and it is possible because m3 (rows:3, columns:2) and m1 (rows:2, columns: 1).
 Then it is obvious, the rule is respected, the column of the first matrix and the rows of the second are of the same dimension, but for the following example, it is a "NOOP" because I invert the cases and the foundation is not fulfilled because 1 !=3.
 
-<img src ="https://user-images.githubusercontent.com/113385187/197419018-f4e9d526-c3f8-40b7-9c44-c69f7db0c236.PNG" width="500"> 
+<img src ="https://user-images.githubusercontent.com/113385187/197421687-81f262bb-de25-4d44-a28c-e42637993aa1.PNG" width="500"> 
 
 ## Problem 3 Pizza:
 
