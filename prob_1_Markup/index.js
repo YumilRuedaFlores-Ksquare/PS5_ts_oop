@@ -5,6 +5,8 @@ const btnWeekly  = document.querySelector('#btn-weekly');
 const grid = document.querySelector('#grid-container');
 
 const _url ='https://gist.githubusercontent.com/carmandomx/b27e23332eda1d061feb3cdada26afc0/raw/438d33407442d2abbf605e87336f48a83ccff3f5/data.json';
+//I created my own gist (looking the yours) and I made a json with more data to show how it works witn n "cards"
+const _url2 ="https://gist.githubusercontent.com/YumilRuedaFlores-Ksquare/1392d19bb568ea159a14dd91ee37da62/raw/b907d90055caf401b47853d13a7d90f352667d45/example.json";
 
 //It would be cool use an intaface with to make a pre-format for OBJ:
 /* obj:
@@ -126,17 +128,17 @@ function request(type, url){
     .catch(error => console.error(error));
 }
 
-request('daily', _url);
+request('daily', _url2);
 
 btnDaily.addEventListener('click', function(){
     clean();
-    request('daily', _url);
+    request('daily', _url2);
 })
 btnMonthly.addEventListener('click',function(){
     clean();
-    request('monthly', _url);
+    request('monthly', _url2);
 })
 btnWeekly.addEventListener('click',function(){
     clean();
-    request('weekly', _url);
+    request('weekly', _url2);
 })
