@@ -99,4 +99,60 @@ body{
     width: 150px;
     height: 150px;
     background-color: green;
+    flex-direction: column;
+}
+.grid-item{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 20px;
+}
+.grid-item img:first-child{
+    height: 30px;
+
+    padding-right: 10px;
+    margin-bottom: 0px;
+}
+.grid-textcontentainer{
+    display:flex;
+    flex-direction: column;
+    background-color: #1c1f4a;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+}
+.title-container img{
+    display: flex;
+    height: 3px;
+    margin-top: 5px;
+}
+.title-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+}
+.title-grid{
+    display: flex;
+    font-size: 15px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.hours-grid{
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: 200;
+    padding-bottom: 5px;
+}
+
+.time-grid{
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.814);
+    font-weight: 200;
 }
