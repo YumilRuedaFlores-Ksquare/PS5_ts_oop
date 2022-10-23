@@ -1,8 +1,11 @@
-const btnDaily   = document.querySelector('#btndaily');
-const btnMonthly = document.querySelector('#btnmonthly');
-const btnWeekly  = document.querySelector('#btnweekly');
+const btnDaily   = document.querySelector('#btn-daily');
+const btnMonthly = document.querySelector('#btn-monthly');
+const btnWeekly  = document.querySelector('#btn-weekly');
 
 const grid = document.querySelector('#grid-container');
+
+const _url ='https://gist.githubusercontent.com/carmandomx/b27e23332eda1d061feb3cdada26afc0/raw/438d33407442d2abbf605e87336f48a83ccff3f5/data.json';
+
 //It would be cool use an intaface with to make a pre-format for OBJ:
 /* obj:
     title: ',
@@ -34,6 +37,7 @@ const skeleton = function(obj) {
     //div general
     const gridItem = newElement('div');
     gridItem.classList.add("grid-item");
+    gridItem.setAttribute('id','item');
 
     //water mark with color
     const newsvg = newElement('img');
@@ -83,14 +87,56 @@ const skeleton = function(obj) {
     grid.appendChild(gridItem);
 
 }
+const clean = function(){
+    const elements = document.querySelectorAll('.grid-item');
+    elements.forEach(function(userItem) {
+        userItem.remove();
+    });
+}
+function request(type, url){
+    fetch(url)
+    .then((response) => response.json())
+    .then(data => {
+        data.forEach((element, i) => {
+            const myTest = {
+                title: '',
+                hours:0,
+                time: 0
+            };
+            if(type == 'daily'){
+                myTest.title = data[i].title;
+                myTest.hours = data[i].timeframes.daily.current;
+                myTest.time = data[i].timeframes.daily.previous
+            }
+            if(type == 'weekly'){
+                myTest.title = data[i].title;
+                myTest.hours = data[i].timeframes.weekly.current;
+                myTest.time = data[i].timeframes.weekly.previous
+            }
+            if(type == 'monthly'){
+                myTest.title = data[i].title;
+                myTest.hours = data[i].timeframes.monthly.current;
+                myTest.time = data[i].timeframes.monthly.previous
+            }   
+            skeleton(myTest);
 
-let myTest = {
-    title: 'Alfa',
-    hours: 32,
-    time: 36
-};
+        })
+     
+    })
+    .catch(error => console.error(error));
+}
 
-skeleton(myTest);
-skeleton(myTest);
-skeleton(myTest);
+request('daily', _url);
 
+btnDaily.addEventListener('click', function(){
+    clean();
+    request('daily', _url);
+})
+btnMonthly.addEventListener('click',function(){
+    clean();
+    request('monthly', _url);
+})
+btnWeekly.addEventListener('click',function(){
+    clean();
+    request('weekly', _url);
+})
