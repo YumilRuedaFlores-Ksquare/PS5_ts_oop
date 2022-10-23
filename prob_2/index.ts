@@ -68,13 +68,20 @@ class Matrix {
 
 }
 
+//Create a matrix
 const m1 = new Matrix(2,2);
-m1.setElement(1,1,10);
+//Setting a value in (i,j)
+m1.setElement(0,1,10);
+
 const m2 = new Matrix(2,2);
 const m5 = new Matrix(2,1);
-
 m2.setElement(1,0,10);
+
+//Adding 2 matrices
 m1.add(m2);
+console.log('Adding: ', m1);
+console.log('Adding matrices with dif...dimentions:')
+m1.add(m5);
 
 m1.setElement(0,0,1);
 m1.setElement(0,1,2);
@@ -84,8 +91,12 @@ m1.setElement(1,1,4);
 
 m5.setElement(0,0,1);
 m5.setElement(1,0,2);
+
+console.log('*******MULTIPLY**********');
+//Multiply
 m1.multiply(m5);
-console.log('EX1: ',m1);
+
+console.log('EX1 result: ', m1);
 
 const m3 = new Matrix(3,3);
 const m4 = new Matrix(3,2);
@@ -112,9 +123,10 @@ m4.setElement(2,0,3);
 m4.setElement(2,1,2);
 
 m3.multiply(m4);
-console.log('eX2: ', m3)
+console.log('EX2 result: ', m3);
 
 
-//Example 3
-m3.multiply(m1);
-m1.multiply(m3);
+// Example 3
+//It is posible m3*m1 but not m1*m3 for the dimentions
+m3.multiply(m1); //SIP
+m1.multiply(m3); //NOOP

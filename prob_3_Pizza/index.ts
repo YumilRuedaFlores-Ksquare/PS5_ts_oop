@@ -1,5 +1,4 @@
 abstract class Pizza {
-    //abstract size: Size
     abstract values:number[]
     abstract extraCheese: boolean
     abstract pepperoni:number
@@ -13,7 +12,7 @@ abstract class Pizza {
         return value;
     }
     resumeOrder():void{
-        return console.log(`\n ******* Resumen de la orden: ******* \n Pizza ${this.description} con ${this.pepperoni+this.ham+this.pineapple} ingredientes, precio: ${this.price}`);
+        return console.log(`\n ******* order summary : ******* \n Pizza ${this.description} con ${this.pepperoni+this.ham+this.pineapple} ingredients, final cost: ${this.price}`);
     };
     
 }
@@ -41,10 +40,6 @@ class smallPizza extends Pizza{
 
 }
 
-const p1 = new smallPizza(false, 1,1,1);
-p1.resumeOrder();
-console.log('Price...small: ', p1.getCost());
-
 class mediumPizza extends Pizza{
     values:number[];
     extraCheese: boolean;
@@ -68,9 +63,6 @@ class mediumPizza extends Pizza{
     }
 
 }
-const p2 = new mediumPizza(true, 1,1,1);
-p2.resumeOrder();
-console.log('Price...medium: ', p2.getCost());
 
 class largePizza extends Pizza{
     values:number[];
@@ -94,9 +86,6 @@ class largePizza extends Pizza{
     }
 
 }
-const p3 = new largePizza(true, 1,1,1);
-p3.resumeOrder();
-console.log('Price...large', p3.getCost());
 
 class extralargePizza extends Pizza{
     values:number[];
@@ -121,6 +110,19 @@ class extralargePizza extends Pizza{
     }
 
 }
-const p4 = new extralargePizza(true, 1,1,1);
+
+const p1 = new smallPizza(false, 1,1,1);
+p1.resumeOrder();
+console.log('Price...small: ', p1.getCost());
+
+const p2 = new mediumPizza(true, 1,1,1);
+p2.resumeOrder();
+console.log('Price...medium: ', p2.getCost());
+
+const p3 = new largePizza(true, 0,1,0);
+p3.resumeOrder();
+console.log('Price...large', p3.getCost());
+
+const p4 = new extralargePizza(true, 1,0,1);
 p4.resumeOrder();
 console.log('Price...extra-large', p4.getCost());
