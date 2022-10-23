@@ -10,6 +10,7 @@ Image with the json I created ([link](https://gist.githubusercontent.com/YumilRu
 <img src ="https://user-images.githubusercontent.com/113385187/197419016-34716302-29e0-416f-ad8b-3c1a39be6621.PNG " width="300"> 
 
 My gist for the json made by me:
+
 <img src ="https://user-images.githubusercontent.com/113385187/197419018-f4e9d526-c3f8-40b7-9c44-c69f7db0c236.PNG" width="300"> 
 
 ## Problem 2 Matrix:
@@ -17,8 +18,10 @@ My gist for the json made by me:
 ## Problem 3 Pizza:
 
 Code to create the pizza's objects
+
 <img src ="https://user-images.githubusercontent.com/113385187/197419053-bdfa936a-800a-4fb3-aafc-3a9b1ff3a435.PNG" width="300"> 
 Result:
+
 <img src ="https://user-images.githubusercontent.com/113385187/197419052-f109f78a-b5dd-48f4-b526-11a0a10f45fd.PNG" width="300"> 
 
 
